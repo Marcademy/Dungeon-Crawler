@@ -20706,6 +20706,7 @@ GameObject:
   - component: {fileID: 841920094}
   - component: {fileID: 841920093}
   - component: {fileID: 841920092}
+  - component: {fileID: 841920096}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -20796,11 +20797,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.1
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -20825,12 +20826,44 @@ Transform:
   m_GameObject: {fileID: 841920091}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3457207, y: 0.5129307, z: -0.23667021, w: 0.749244}
-  m_LocalPosition: {x: -48.152267, y: 48.744934, z: -14.031521}
+  m_LocalPosition: {x: -15.280571, y: 10.990001, z: -9.413025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1854733133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841920096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841920091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!43 &876961285
 Mesh:
   m_ObjectHideFlags: 0
@@ -35322,6 +35355,39 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1854733132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854733133}
+  m_Layer: 0
+  m_Name: "C\xE1maras"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854733133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854733132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.37057, y: 0.9, z: -697.597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 841920095}
+  - {fileID: 2054887397}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862259671
 GameObject:
   m_ObjectHideFlags: 0
@@ -40107,7 +40173,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 12, z: -8}
+  FollowOffset: {x: -7.51, y: 10, z: -5.51}
 --- !u!114 &2054887396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40132,7 +40198,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -40160,11 +40226,11 @@ Transform:
   m_GameObject: {fileID: 2054887394}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3457207, y: 0.5129307, z: -0.23667021, w: 0.749244}
-  m_LocalPosition: {x: -0.4, y: 13.89, z: -709.5}
+  m_LocalPosition: {x: -15.280571, y: 10.990001, z: -9.413025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1854733133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2067225853
 Mesh:
@@ -40890,5 +40956,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1231800045}
   - {fileID: 296065128}
-  - {fileID: 2054887397}
-  - {fileID: 841920095}
+  - {fileID: 1854733133}
